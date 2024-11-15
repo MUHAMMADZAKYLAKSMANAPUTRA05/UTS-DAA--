@@ -1,0 +1,92 @@
+Analisis dan Kebutuhan Sistem Manajemen Data Pasien
+1. Analisis Sistem
+Sistem ini bertujuan untuk mengelola data pasien secara efektif dan efisien, dengan pengelolaan data yang hanya dapat dilakukan oleh admin. Proses pengelolaan data pasien akan mencakup pencatatan informasi pribadi pasien dan keluhan medis yang disampaikan oleh pasien. Berdasarkan studi kasus, hanya admin yang memiliki akses untuk menginput, mengedit, atau menghapus data pasien. Pasien tidak memiliki akses langsung ke sistem, tetapi hanya data mereka yang dimasukkan dan dikelola oleh admin.
+
+Kebutuhan Pengguna
+Admin:
+Admin akan bertanggung jawab penuh untuk menginput data pasien, termasuk informasi pribadi dan keluhan medis. Admin juga akan memiliki hak untuk mencari, mengedit, dan menghapus data pasien jika diperlukan. Admin akan mengelola seluruh data pasien yang terdaftar di sistem.
+
+Pasien:
+Pasien hanya terlibat dalam memberikan informasi kepada admin mengenai keluhan medis mereka. Pasien tidak memiliki akses ke sistem.
+
+Analisis Proses Bisnis
+Proses dimulai ketika pasien datang ke fasilitas kesehatan dan admin diminta untuk mencatat data pasien baru beserta keluhannya.
+Admin mengakses sistem melalui antarmuka login dan menginput data pasien.
+Data pasien yang dimasukkan akan terhubung dengan keluhan medis yang dialami pasien.
+Admin dapat melakukan pencarian data pasien atau memodifikasi data pasien berdasarkan kebutuhan.
+2. Kebutuhan Sistem (Functional & Non-Functional)
+Kebutuhan Fungsional (Functional Requirements)
+Login Admin
+
+Deskripsi: Admin harus dapat masuk ke sistem menggunakan username dan password yang valid.
+Proses: Admin memasukkan username dan password, sistem memverifikasi kredensial. Jika valid, admin dapat mengakses sistem.
+Kebutuhan:
+Sistem harus memvalidasi kredensial pengguna.
+Jika login gagal, sistem harus memberikan pesan kesalahan yang sesuai.
+Input Data Pasien
+
+Deskripsi: Admin harus dapat memasukkan data pasien baru ke dalam sistem.
+Proses: Admin mengisi form input data pasien yang terdiri dari nama, alamat, nomor telepon, tanggal lahir, jenis kelamin, dan ID pasien.
+Kebutuhan:
+Semua field harus diisi sebelum data pasien dapat disimpan.
+Sistem menghasilkan ID pasien yang unik secara otomatis.
+Data pasien harus disimpan dengan format yang benar dan terstruktur dalam database.
+Input Keluhan Medis
+
+Deskripsi: Admin harus dapat menginput keluhan medis yang dialami oleh pasien.
+Proses: Admin mengisi form input keluhan medis yang berhubungan dengan pasien yang telah terdaftar.
+Kebutuhan:
+Keluhan medis harus disimpan bersama dengan ID pasien.
+Sistem dapat menghubungkan keluhan medis dengan data pasien yang relevan.
+Pencarian Data Pasien
+
+Deskripsi: Admin dapat mencari data pasien berdasarkan kriteria seperti nama, ID pasien, atau nomor telepon.
+Proses: Admin memasukkan kata kunci pencarian (misalnya nama pasien), sistem akan menampilkan hasil yang relevan.
+Kebutuhan:
+Fitur pencarian harus cepat dan akurat.
+Hasil pencarian harus menunjukkan semua data pasien yang sesuai dengan kriteria pencarian.
+Pengeditan dan Penghapusan Data Pasien
+
+Deskripsi: Admin harus dapat mengedit atau menghapus data pasien jika diperlukan.
+Proses: Admin mengakses data pasien yang ingin diedit atau dihapus dan melakukan perubahan yang diperlukan.
+Kebutuhan:
+Sistem harus mencatat setiap perubahan atau penghapusan data untuk keperluan audit.
+Penghapusan data pasien harus dikonfirmasi oleh admin sebelum dilakukan.
+Audit dan Log Aktivitas
+
+Deskripsi: Sistem harus mencatat setiap aktivitas admin yang berhubungan dengan pengelolaan data pasien.
+Proses: Setiap login, pengeditan data, atau penghapusan data harus tercatat dengan informasi waktu dan identitas admin yang melakukan aktivitas.
+Kebutuhan:
+Sistem harus menyediakan log aktivitas yang dapat diakses oleh manajer IT untuk tujuan pengawasan dan keamanan.
+Kebutuhan Non-Fungsional (Non-Functional Requirements)
+Keamanan
+
+Deskripsi: Sistem harus aman dan melindungi data pasien dari akses yang tidak sah.
+Proses: Data yang disimpan di database harus terenkripsi dan akses hanya diperbolehkan untuk admin yang terautentikasi.
+Kebutuhan:
+Enkripsi data sensitif seperti nomor telepon, alamat, dan keluhan medis.
+Sistem harus menggunakan otentikasi dua faktor (2FA) untuk meningkatkan keamanan login.
+Keandalan (Reliability)
+
+Deskripsi: Sistem harus dapat berfungsi dengan baik dalam kondisi normal dan memiliki waktu downtime yang minimal.
+Kebutuhan:
+Sistem harus tersedia 99% sepanjang waktu.
+Proses backup data harus dilakukan secara rutin untuk menghindari kehilangan data.
+Kinerja (Performance)
+
+Deskripsi: Sistem harus dapat menangani permintaan yang tinggi dan memproses data dengan cepat.
+Kebutuhan:
+Waktu respons untuk pencarian data pasien harus kurang dari 3 detik.
+Sistem harus dapat menangani hingga 500 transaksi per menit tanpa penurunan kinerja yang signifikan.
+Skalabilitas
+
+Deskripsi: Sistem harus dapat di-scale up untuk mendukung lebih banyak data pasien jika diperlukan di masa depan.
+Kebutuhan:
+Sistem harus dirancang agar dapat menangani lebih banyak data tanpa mempengaruhi kinerja.
+Basis data harus dapat dioptimalkan untuk pertumbuhan jumlah pasien.
+Usability
+
+Deskripsi: Antarmuka sistem harus mudah digunakan oleh admin yang tidak memiliki latar belakang teknis.
+Kebutuhan:
+Desain antarmuka pengguna (UI) harus intuitif dan mudah dipahami.
+Proses input data dan pencarian pasien harus sederhana dan tidak memerlukan pelatihan yang lama.

@@ -1,0 +1,20 @@
+@startuml
+actor Admin
+
+rectangle "Sistem Manajemen Data Pasien" {
+  usecase "Login Admin" as UC1
+  usecase "Input Data Pasien" as UC2
+  usecase "Input Keluhan Medis" as UC3
+  usecase "Pencarian Data Pasien" as UC4
+  usecase "Edit / Hapus Data Pasien" as UC5
+  usecase "Audit & Log Aktivitas" as UC6
+}
+
+Admin --> UC1
+Admin --> UC2
+Admin --> UC3
+Admin --> UC4
+Admin --> UC5
+Admin --> UC6
+
+@enduml

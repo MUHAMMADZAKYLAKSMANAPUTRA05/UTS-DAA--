@@ -1,0 +1,21 @@
+@startuml
+!define RECTANGLE class
+
+start
+
+:Admin Login;
+if (Login Valid?) then (yes)
+  :Access Dashboard;
+  :Input Data Pasien;
+  :Input Keluhan Medis;
+  :Save Data Pasien & Keluhan;
+  :Pencarian Data Pasien;
+  :Edit / Hapus Data Pasien;
+  :Audit & Log Aktivitas;
+else (no)
+  :Tampilkan Error Login;
+  stop
+endif
+
+stop
+@enduml
