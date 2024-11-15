@@ -1,5 +1,5 @@
 # PERKENALAN
-- Nama: Muhammad zacky laksmana putra
+- Nama: Muhammad zaky laksmana putra
 - NIM: 20230801116
 - Fakultas: Ilmu Komputer
 - Jurusan: Teknik Informatika
